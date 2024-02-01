@@ -1,3 +1,6 @@
+/** 判断两个类型是否全等 */
+export type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? true : false
+
 /** 判断是否是 never 类型 */
 export type IsNever<T> = [T] extends [never] ? true : false
 
