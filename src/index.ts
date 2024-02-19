@@ -87,3 +87,6 @@ type _CanJSONStringify<T, I extends boolean = false> = IsNever<T> extends true ?
 
 /** 判断一个类型能否被 JSON.stringify */
 export type CanJSONStringify<T> = _CanJSONStringify<T>
+
+/** 获取字符串提示 */
+export type TipString<T extends string> = T | (string & {})
